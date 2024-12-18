@@ -130,7 +130,7 @@ li {
 
 .sub-main-visual-img {
   height: 180px;
-  background-image: url(../img/mv.jpg);
+  background-image: url(../img/mv.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -363,11 +363,11 @@ li {
   /* メインビジュアル */
   .main-visual-img {
     height: 60vh;
-    background-image: url(../img/sp_mv.jpg);
+    background-image: url(../img/sp_mv.png);
   }
   .sub-main-visual-img {
     height: 100px;
-    background-image: url(../img/sp_mv.jpg);
+    background-image: url(../img/sp_mv.png);
   }
 
   /* プロフィール */
