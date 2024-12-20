@@ -1,9 +1,20 @@
+.back{
+  width: 120%;
+  height: 120vh;
+  position: fixed;
+  top: -10vh;
+  left: -10%;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  z-index: -2;
+}
+
 body {
   font-family: "Lato","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
-  color: #333;
+  color: #777777;
 }
 
 a {
@@ -24,19 +35,12 @@ li {
   list-style: none;
 }
 
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
 
 /*--------------------------------
  レイアウト
 ---------------------------------*/
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .inner {
@@ -49,13 +53,8 @@ li {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 34px;
-  font-weight: normal;
-  line-height: 1;
-  margin-bottom: 40px;
-  text-align: center;
-  letter-spacing: .05em;
-  color: #fad9da;
+  margin-bottom: 20px;
+  text-align:center
 }
 
 .lead {
@@ -121,38 +120,31 @@ li {
  メインビジュアル
 ---------------------------------*/
 .main-visual-img {
-  height: 700px;
-  background-image: url(../img/mv.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.sub-main-visual-img {
-  height: 180px;
-  background-image: url(../img/mv.png);
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background-image: url("../img/mv.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 /*--------------------------------
- プロフィール
+ about
 ---------------------------------*/
-.profile {
-  padding: 50px 0;
+.about-item {
+	display: flex;
+	justify-content: center;
+	column-gap: 10%;
 }
 
-.profile-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #fad9da;
+.about-name {
+	font-size: 28px;
 }
 
-.profile-text {
-  max-width: 500px;
-  margin: 0 auto;
+.about-item img {
+	margin: auto;
+	width: 30%;
 }
 
 /*--------------------------------
@@ -324,17 +316,8 @@ li {
     line-height: 1.7;
   }
 
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
   /* 見出し */
   .title {
-    font-size: 26px;
     margin-bottom: 20px;
   }
 
@@ -362,22 +345,26 @@ li {
 
   /* メインビジュアル */
   .main-visual-img {
-    height: 60vh;
-    background-image: url(../img/sp_mv.png);
-  }
-  .sub-main-visual-img {
-    height: 100px;
-    background-image: url(../img/sp_mv.png);
-  }
-
-  /* プロフィール */
-  .profile {
-    padding: 30px 0;
-  }
-  .profile-title {
-    font-size: 20px;
+  width: 100%;
+  padding-top: 133.378016%;
+  background-image: url("../img/sp_mv.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   }
 
+  /* about */
+	.about-item {
+		display: block;
+		align-content: center;
+	}
+	
+	.about-item img {
+		display: block;
+		margin: auto;
+		width: 60%;
+	}
+	
   /* Works */
   .works-name {
     font-size: 10px;
