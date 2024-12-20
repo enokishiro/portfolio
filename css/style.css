@@ -120,7 +120,7 @@ li {
  メインビジュアル
 ---------------------------------*/
 .main-visual-img {
-  width: 90%;
+  width: 100%;
   height: 0;
   padding-top: 56.25%;
   background-image: url("../img/mv.png");
