@@ -14,7 +14,7 @@ body {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
-  color: #777777;
+  color: #777;
 }
 
 a {
@@ -70,7 +70,7 @@ li {
   top: 0;
   z-index: 1;
   width: 100%;
-  transition: background-color .6s;
+  transition:.6s;
 }
 
 .header.active {
@@ -93,7 +93,7 @@ li {
 }
 
 .header-logo a {
-  color: #fff;
+  color: #fecfcf;
 }
 
 .header-nav-list {
@@ -106,10 +106,10 @@ li {
 }
 
 .header-nav-item a {
-  font-size: 13px;
+  font-size: 20px;
   padding: 5px 0;
   letter-spacing: .1em;
-  color: #fff;
+  color: #fecfcf;
 }
 
 .header-nav-item a:hover {
@@ -160,7 +160,7 @@ li {
   width: 31.74603%;
   margin-right: 1.58730%;
   margin-bottom: 40px;
-  color: #333;
+  color: #777;
 }
 
 .works-item:hover {
