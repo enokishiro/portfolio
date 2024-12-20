@@ -85,7 +85,7 @@ li {
 }
 
 .header-logo {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   line-height: 1.2;
   margin-right: 20px;
@@ -106,7 +106,7 @@ li {
 }
 
 .header-nav-item a {
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 0;
   letter-spacing: .1em;
   color: #fecfcf;
@@ -121,12 +121,7 @@ li {
 ---------------------------------*/
 .main-visual-img {
   width: 100%;
-  height: 0;
-  padding-top: 56.25%;
-  background-image: url("../img/mv.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  text-align: center;
 }
 
 /*--------------------------------
@@ -345,14 +340,16 @@ li {
 
   /* メインビジュアル */
   .main-visual-img {
-  width: 100%;
-  padding-top: 133.378016%;
+  height: 100vh;
   background-image: url("../img/sp_mv.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   }
-
+	.main-visual-img img {
+		display: none;
+	}
+	
   /* about */
 	.about-item {
 		display: block;
