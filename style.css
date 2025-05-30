@@ -216,26 +216,6 @@ li {
 .skill-name {
   margin-bottom: 3px;
 }
-
-/*--------------------------------
- Contact
----------------------------------*/
-.contact-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-item {
-  display: block;
-  margin: 0 20px;
-  text-align: center;
-}
-
-.contact-text {
-  margin-top: 10px;
-  text-align: center;
-}
 /*--------------------------------
  ページトップ
 ---------------------------------*/
