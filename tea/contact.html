@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本茶 紅茶 中国茶｜ご意見・お問い合わせ</title>
+  <meta name="author" content="全日本お茶組合">
+  <meta name="description" content="お茶に関するご意見やお問い合わせなどをお知らせください。">
+  <link rel="icon" href="images/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@600;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper contact">
+    <header>
+      <h1><a href="index.html">日本茶 紅茶 中国茶</a></h1>
+      <nav class="global">
+        <ul>
+          <li><a href="index.html"><span>お茶の始まり</span></a></li>
+          <li><a href="tool.html"><span>お茶と茶器</span></a></li>
+          <li><a href="catalog.html"><span>お茶カタログ</span></a></li>
+          <li><a href="common.html"><span>お茶の常識</span></a></li>
+          <li><a href="contact.html"><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="visual_img">
+    </div><!-- visual_img -->
+    <div class="content">
+      <main>
+        <section>
+          <h2>お問い合わせ</h2>
+          <p>ご意見・お問い合わせを記入して頂いた方の中から、ご希望の方全員に毎月15日発行のメールマガジン「お茶の季節」をお送りします。</p>
+            <form action="sample.cgi" method="post">
+              <table>
+                <tr>
+                  <th><label for="name">お名前</label></th>
+                  <td><input type="text" name="name" id="name" placeholder="例：山田 太郎"></td>
+                </tr>
+                <tr>
+                  <th><label for="mail">メールアドレス</label></th>
+                  <td><input type="text" name="mail" id="mail"><br>
+                    <input type="text" name="re_mail"><span>※再入力</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>性別</th>
+                  <td>
+                    <input type="radio" name="gender" value="man" id="man">
+                    <label for="man">男性</label>
+                    <input type="radio" name="gender" value="woman" id="woman">
+                    <label for="woman">女性</label>
+                    <input type="radio" name="gender" value="none" id="none">
+                    <label for="none">無回答</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>都道府県</th>
+                  <td>
+                    <select name="local">
+                      <option>ここから選択してください</option>
+                      <option value="saporo">札幌</option>
+                      <option value="tokyo">東京</option>
+                      <option value="osaka">大阪</option>
+                      <option value="kagoshima">鹿児島</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>好きなお茶</th>
+                  <td>
+                    <input type="checkbox" name="tea" value="japanese" id="japanese">
+                    <label for="japanese">日本茶</label>
+                    <input type="checkbox" name="tea" value="black_tea" id="black_tea">
+                    <label for="black_tea">紅茶</label>
+                    <input type="checkbox" name="tea" value="chinese" id="chinese">
+                    <label for="chinese">中国茶</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>メルマガを希望する</th>
+                  <td>
+                    <input type="radio" name="magazine" value="yes" checked id="yes">
+                    <label for="yes">希望する</label>
+                    <input type="radio" name="magazine" value="no" id="no">
+                    <label for="no">希望しない</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="comment">ご意見・お問い合せ</label></th>
+                  <td><textarea name="comment" rows="6" placeholder="ご意見・お問い合せをこちらにご記入をお願います。" id="comment"></textarea></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="send"><input type="submit" value="送信ボタン">
+                    <input type="reset" value="リセットボタン"></td>
+                </tr>
+              </table>
+
+            </form>
+        </section>
+      </main>
+      <aside>
+      </aside>
+    </div><!-- content -->
+
+    <footer>
+      <div class="content">
+        <section>
+          <h2>日本茶 紅茶 中国茶</h2>
+          <address>
+            <span>0120-000-000</span><br>
+            〒160-0021 東京都新宿区歌舞伎町100-10-1<br>
+            全日本お茶組合本部
+          </address>
+        </section>
+        <nav class="local">
+          <ul>
+            <li><a href="#x">全日本お茶組合</a></li>
+            <li><a href="#x">組合規約</a></li>
+            <li><a href="#x">アクセス</a></li>
+            <li><a href="#x">ブログ</a></li>
+          </ul>
+        </nav>
+      </div><!-- content -->
+      <hr>
+      <small>&copy; 2019 All Japan tea union.</small>
+    </footer>
+  </div><!-- wrapper -->
+</body>
+
+</html>

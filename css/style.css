@@ -35,18 +35,27 @@ li {
   list-style: none;
 }
 
-
 /*--------------------------------
  レイアウト
 ---------------------------------*/
 .section {
-  padding: 100px 0;
+  padding-top: 80px;
 }
 
 .inner {
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateY(150px);
+}
+
+.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /*--------------------------------
@@ -171,13 +180,13 @@ li {
 }
 
 .works-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 8px;
 }
 
 .works-info {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /*--------------------------------
@@ -213,44 +222,11 @@ li {
 }
 
 /*--------------------------------
- Contact
----------------------------------*/
-.contact-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-item {
-  display: block;
-  margin: 0 20px;
-  text-align: center;
-}
-
-.contact-text {
-  margin-top: 10px;
-  text-align: center;
-}
-/*--------------------------------
- ページトップ
----------------------------------*/
-.page-top {
-  font-weight: bold;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
-  background-color: #e6e6e6;
-}
-
-.page-top .material-icons-outlined {
-  vertical-align: bottom;
-}
-
-/*--------------------------------
  フッター
 ---------------------------------*/
 .footer {
-  padding: 30px;
+  margin-top: 80px;
+  padding: 20px;
   background-color: #fad9da;
 }
 
@@ -318,7 +294,7 @@ li {
 
   /* レイアウト */
   .section {
-    padding: 40px 0;
+    padding-top: 20px;
   }
 
   .inner {
@@ -362,6 +338,11 @@ li {
 		width: 60%;
 	}
 	
+	.about-text {
+		padding-top: 20px;
+	}
+    
+
   /* Works */
   .works-name {
     font-size: 10px;
@@ -390,11 +371,6 @@ li {
 
   .skill-item:last-child {
     margin-bottom: 0;
-  }
-
-  /* Contact */
-  .contact-item {
-    margin: 0 10px;
   }
 
   /* フッター */

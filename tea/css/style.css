@@ -1,0 +1,485 @@
+@charset "utf-8";
+
+body {
+  font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+  /* 書体の指定で前に書いてあるものから優先的に表示される。日本語のゴシック体にする記述。 */
+  background-color: #608862;
+}
+
+header h1, header nav a, footer h2 {
+  font-family: 'Noto Serif JP', serif;
+  /* CDNで読み込んだgoogle fontsの指定。 */
+}
+
+h2, h3, .global, th, dt {
+  font-family: 'Noto Sans JP', sans-serif;
+  /* CDNで読み込んだgoogle fontsの指定。 */
+}
+
+/* wrapper */
+.wrapper{
+  max-width: 1100px;
+  /* 横幅の最大値。1100px以上の横幅があるデバイスでは1100pxで表示し、それ以下の横幅のデバイスではwidth:100%; */
+  margin: 0 auto;
+  /* 横幅が設定されているブロックレベル要素を左右真ん中に。 */
+  background-color: #fff;
+}
+
+/* header */
+header{
+  display: flex;
+  /* 直接の子要素を全て横並びに */
+  justify-content: space-between;
+  /* この要素の横幅に両端揃え均等配置 */
+  align-items: center;
+  /* 縦方向中央配置 */
+  padding: 20px 40px;
+}
+
+header h1{
+  width: 295px;
+  /* display:flex;で横並びになった要素（フレックスアイテム）はwidthを付けないと縮んでしまう */
+}
+header h1 a{
+  display: block;
+  padding-left: 45px;
+  font-size: 2.8rem;
+  line-height: 43px;
+  font-weight: 900;
+  color: #030;
+  background-image: url(../images/logo_mark.svg);
+  background-size: 38px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+header nav.global{
+  width: calc(100% - 340px);
+  /* 1020px-680px=340px */
+  /* フレックスアイテムの横幅を足して100%を超えない値に設定する */
+  line-height: 26px;
+}
+header nav.global ul{
+  display: flex;
+  /* headerにflexを設定しているが、孫要素のulには作用しないのでliたちを横並びにするために記述している。 */
+  justify-content: flex-end;
+  /* この要素の右側揃え */
+}
+header nav.global ul li a{
+  /* ボタンの装飾はクリックできるaタグに記述する。 */
+  display: block;
+  /* インライン要素では適用されない記述が多いのでブロックレベル要素に変換する。 */
+  padding: 0 20px;
+  /* 文章の左右に均一の余白を作る。 */
+  border-right: 1px solid #030;
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* google fontsで設定したNoto serifのboldの値 */
+  color: #030;
+}
+header nav.global ul li:last-child a{
+  padding-right: 0;
+  border-right: 0;
+  /* 最後のaタグの右側の余白と線を削除しないとheaderの左右の余白間が揃わないので削除 */
+}
+header nav.global ul li a:hover span{
+  border-bottom: 2px solid #b27616;
+  color: #b27616;
+}
+.index .global li:nth-child(1) a span,
+.tool .global li:nth-child(2) a span,
+.catalog .global li:nth-child(3) a span,
+.common .global li:nth-child(4) a span,
+.contact .global li:nth-child(5) a span{
+  color: #b27616;
+  border-bottom: 2px solid #b27616;
+}
+/* .visual_img */
+.visual_img{
+  height: 220px;
+  /* 中身の子要素たちに高さが無いが、画像を表示させる高さが欲しいので設定する。 */
+  padding: 40px 90px 0;
+  background-color: #030;
+  background-image: url(../images/visual_img_01.png);
+  background-size: cover;
+}
+.visual_img p{
+  font-family: 'Noto Sans JP',sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  /* Noto Sans JPのregularの値 */
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 2px 2px 2px #000;
+  /* 背景写真と被る文字が読みづらくなるので影をつけて視認性を上げている */
+}
+.visual_img p span{
+  display: block;
+  /* brタグの強制改行ではない方法で改行する際は意味のないspanでマークアップをしてdisplay:block;にすることで改行できる。 */
+}
+
+/* .content */
+.content{
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  /* 背景色が無い要素なのでmarginでも可 */
+}
+
+/* main */
+main{
+  width: calc(100% - 210px);
+  /* asideの横幅と足して100%を超えない計算式 */
+}
+main section{
+  margin-bottom: 20px;
+}
+main section:last-child{
+  margin-bottom: 0;
+}
+main h2{
+  padding-left: 50px;
+  /* 背景画像を文字とかぶらないようにするために内側に余白を作成 */
+  margin-bottom: 10px;
+  background-image: url(../images/h2_img.png);
+  background-repeat: no-repeat;
+  /* デフォルトの設定だと背景画像が繰り返し表示されてしまうので一枚だけ表示する設定に */
+  background-position: left center;
+  /* 背景写真を左寄せ縦中央に配置 */
+  font-size: 2rem;
+  font-weight: 500;
+  /* Noto Sans JPのmidiumの値 */
+  line-height: 30px;
+  color: #030;
+}
+main p{
+  margin: 0 0 10px 50px;
+  /* h2に合わせて文字の頭が揃うように余白を確保 */
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: justify;
+  /* 両端揃え最終行左揃え */
+}
+main .tea_images{
+  display: flex;
+  /* 今回マークアップを段落として一枚一枚画像を配置したので横並びにするflexを設定 */
+  margin: 0 0 10px 50px;
+}
+main .tea_images p{
+  margin: 0;
+  /* main pのセレクタにmarginが設定されていてimgを内包しているpにも影響が出ていたのでリセット */
+}
+
+/* .production */
+main .production{
+  display: flex;
+  justify-content: space-between;
+}
+main .production .commentary{
+  width: calc(100% - 280px);
+  /* グラフの入るfigureの大きさと足して100%を超えない値に */
+}
+main .production .commentary .refer{
+  margin-top: 50px;
+  font-size: 1.4rem;
+}
+
+main .production figure{
+  width: 260px;
+}
+main .production figure figcaption{
+  margin: 10px 0 0 5px;
+  font-size: 1.4rem;
+}
+
+/* dl.info */
+dl.info{
+  height: 100px;
+  padding: 10px 20px;
+  border: 1px solid #030;
+  margin-left: 50px;
+  font-size: 1.6rem;
+  overflow-y: auto;
+  /* 縦方向にこの要素から子要素がはみ出す場合はスクロールバーを表示 */
+}
+dl.info div{
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 2px dotted #ccc;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+dl.info div dt{
+  width: 9em;
+  /* テキストの最大文字数が全角8文字だったので全角1文字分余白が生まれる9emの設定に */
+}
+dl.info div dd{
+  width: calc(100% - 9em);
+  /* dtと足して100%を超えない値に */
+  text-align: justify;
+}
+
+/* aside */
+aside{
+  width: 180px;
+  margin-top: 40px;
+  background-image: url(../images/asid_bg.png);
+  background-size: cover;
+}
+.index aside{
+  background: none;
+  /* index.htmlのみasideのエリアに画像が入るので背景画像を無しに */
+}
+aside .ad{
+  margin-bottom: 20px;
+}
+
+/* footer */
+footer{
+  padding: 20px 40px;
+  background-color: #030;
+  color: #fff;
+}
+footer .content{
+  /* 記述を上書きする際は点数を以前書いた時より高くなるように記述する */
+  margin: 0;
+  /* mainとasideを横並びにしている記述にmarginがついていたのでリセット */
+}
+footer h2{
+  padding-left: 38px;
+  margin-bottom: 20px;
+  background-image: url(../images/logo_mark_w.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 2.2rem;
+  line-height: 33px;
+}
+
+/* address */
+footer address{
+  margin-left: 40px;
+  font-size: 1.4rem;
+}
+footer address span{
+  padding-left: 28px;
+  background-image: url(../images/free_dial.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* nav.local */
+nav.local{
+  margin-top: 5px;
+}
+nav.local ul{
+  display: flex;
+}
+nav.local ul li a{
+  margin-left: 30px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+nav.local ul li a:hover{
+  border-bottom: 1px solid #fff;
+}
+hr{
+  /* デフォルトの設定の線は立体的に見える装飾がされているのでリセットし、背景色と高さで線のように見せている */
+  height: 1px;
+  border: none;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+small{
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* ここから下層ページ */
+/* tool.html */
+.tool .visual_img{
+  height: 160px;
+  background-image: url(../images/visual_img_02.png);
+  background-size: cover;
+}
+.column{
+  margin: 30px 0 0 24px;
+}
+.tool h3,.common h3{
+  padding-left: 24px;
+  margin-bottom: 20px;
+  background-image: url(../images/h3_img.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 20px;
+  color: #030;
+}
+.column div{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
+}
+.column p{
+  width: calc(100% - 244px);
+  margin-left: 0;
+}
+.column p.img_area{
+  width: 224px;
+  padding: 16px 16px 36px;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* catalog.html */
+.catalog .visual_img{
+  height: 160px;
+  background-image: url(../images/visual_img_03.png);
+  background-size: cover;
+}
+.showcase{
+  display: flex;
+  flex-wrap: wrap;
+  /* この要素からはみ出す場合は折り返して繰り返し横並び */
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.showcase section{
+  width: calc(100% / 3);
+  /* 一列に三つのセクションが並ぶ大きさ */
+  padding: 0 20px 20px;
+  /* box-sizing:border-boxで組んでいるのでwidthの内側に余白がつく */
+  border-right: 1px dotted #ccc;
+  margin-bottom: 40px;
+}
+.showcase section:last-child{
+  margin-bottom: 40px;
+}
+.showcase > section:nth-child(3){
+  /* 「>」は「直接の子要素」のという意味 */
+  border-right: none;
+}
+.showcase section h3{
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  background-color: #608862;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+.showcase section p{
+  margin: 0;
+}
+.catalog p.refer{
+  margin: 0 0 0 50px;
+}
+
+/* common.html */
+.common .visual_img{
+  height: 160px;
+  background-image: url(../images/visual_img_04.png);
+  background-size: cover;
+}
+.common h3{
+  margin: 0 0 10px 25px;
+}
+.comm{
+  margin-left: 50px;
+}
+.comm dt{
+  border-bottom: 2px dotted #030;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 30px;
+  color: #030;
+}
+.comm dd{
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+.pagetop{
+  text-align: right;
+}
+.pagetop:hover a{
+  color: #b27616;
+}
+/* contact.html */
+.contact .visual_img{
+  width: 100%;
+  height: 160px;
+  background-image: url(../images/visual_img_05.png);
+  background-size: cover;
+}
+table{
+  width: calc(100% - 50px);
+  /* 外側につけた余白(margin)分の大きさを引いている */
+  margin-left: 50px;
+  border: 1px solid #030;
+}
+
+table th{
+  width: 200px;
+  font-size: 1.6rem;
+  background-color: #608862;
+  color: #fff;
+  text-align: right;
+  padding: 10px 20px;
+  border-bottom: 1px solid #fff;
+}
+table tr:nth-child(7) th{
+  border-bottom: 1px solid #030;
+}
+table td{
+  font-size: 1.6rem;
+  padding: 10px 20px;
+  border: 1px solid #030;
+}
+table tr:last-child td{
+  text-align: center;
+}
+/* form */
+input{
+  font-size: 1.6rem;
+  padding: 5px;
+}
+form span{
+  color: #f00;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+td label{
+  margin-right: 20px;
+}
+input[type="text"]{
+  /* inputタグは属性値によって役割が異なるため、限定的な指定をする際は上記のような記述をする */
+  width: 70%;
+}
+input#mail{
+  margin-bottom: 10px;
+}
+select{
+  font-size: 1.6rem;
+  padding: 5px;
+}
+textarea{
+  font-size: 1.6rem;
+  width: 90%;
+  padding: 5px;
+  resize: none;
+  /* この記述を入れておかないとテキストボックスの大きさをユーザーが好きに変更できる設定になってしまう */
+  vertical-align: bottom;
+}
+.send input{
+  width: 200px;
+}
+input[type="submit"]{
+  margin-right: 50px;
+}
