@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
@@ -22,7 +23,6 @@
 
 <body>
   <div class="wrapper">
-
     <!-- header -->
     <header class="header">
       <div class="header-inner">
@@ -31,7 +31,7 @@
         </h1>
         <nav class="header-nav">
           <ul class="header-nav-list">
-			<li class="header-nav-item"><a href="#about">About</a></li>
+            <li class="header-nav-item"><a href="#about">About</a></li>
             <li class="header-nav-item"><a href="#works">Works</a></li>
             <li class="header-nav-item"><a href="#skills">Skill</a></li>
           </ul>
@@ -44,7 +44,9 @@
 
       <!-- main-visual -->
       <div class="main-visual">
-        <div class="main-visual-img"><p><img src="img/mv.png"></p></div>
+        <div class="main-visual-img">
+          <p><img src="img/mv.png"></p>
+        </div>
       </div>
       <!-- /main-visual -->
 
@@ -52,13 +54,15 @@
       <section class="about section" id="about">
         <div class="inner">
           <h2 class="title"><img src="img/about.png" width="250" height="163" alt="about"></h2>
-				<div class="about-item">
-              <img src="img/about-01.png" width="542" height="540" alt="">
-					<div class="about-text">
-                <h3 class="about-name">中村 沙耶 - Saya Nakamura</h3>
-                <p class="about-text">1996年9月生まれ、北海道出身。神田外語大学を卒業後、2020年12月〜23年1月まで製造業界の企業にて、総務を担当。退社後、半年間の職業訓練にてWebデザインやコーディングについて学ぶ。23年8月からweb関連業務に従事し、現在はwebコーダーとしてサイト制作業務を担当。</p>
-              </div>
+          <div class="about-item">
+            <img src="img/about-01.png" width="542" height="540" alt="">
+            <div class="about-text">
+              <h3 class="about-name">中村 沙耶 - Saya Nakamura</h3>
+              <p class="about-text">
+                1996年9月生まれ、北海道出身。神田外語大学を卒業後、2020年12月〜23年1月まで製造業界の企業にて、総務を担当。退社後、半年間の職業訓練にてWebデザインやコーディングについて学ぶ。23年8月からweb関連業務に従事し、現在はwebコーダーとしてサイト制作業務を担当。
+              </p>
             </div>
+          </div>
         </div>
       </section>
       <!-- /about -->
@@ -69,21 +73,36 @@
         <div class="inner">
           <h2 class="title"><img src="img/works.png" width="250" height="163" alt="works"></h2>
           <div class="works-list">
-            <a class="works-item" href="works-portfolio.html">
-              <p class="works-img"><img src="img/portfolio.png" alt="" /></p>
-              <p class="works-name">ポートフォリオサイト</p>
-              <p class="works-info">Design / Coding(Responsive)</p>
-            </a>
-            <a class="works-item" href="mirai/index.html" target="_blank">
-              <p class="works-img"><img src="img/mirai.png" alt="" /></p>
-              <p class="works-name">訓練校課題①</p>
-              <p class="works-info">Design / Coding(Responsive)</p>
-            </a>
-            <a class="works-item" href="tea/index.html" target="_blank">
-              <p class="works-img"><img src="img/tea.png" alt="" /></p>
-              <p class="works-name">訓練校課題②</p>
-              <p class="works-info">Coding</p>
-            </a>
+            <div class="hover">
+              <a class="works-item" href="works-portfolio.html">
+                <p class="works-img"><img src="img/portfolio.png" alt="" /></p>
+                <div class="mask">
+                  <div class="caption">詳細を表示</div>
+                </div>
+                <p class="works-name">ポートフォリオサイト</p>
+                <p class="works-info">Design / Coding(Responsive)</p>
+              </a>
+            </div>
+            <div class="hover">
+              <a class="works-item" href="mirai/index.html" target="_blank">
+                <p class="works-img"><img src="img/mirai.png" alt="" /></p>
+                <div class="mask">
+                  <div class="caption">実際のページを見る</div>
+                </div>
+                <p class="works-name">訓練校課題①</p>
+                <p class="works-info">Design / Coding(Responsive)</p>
+              </a>
+            </div>
+            <div class="hover">
+              <a class="works-item" href="tea/index.html" target="_blank">
+                <p class="works-img"><img src="img/tea.png" alt="" /></p>
+                <div class="mask">
+                  <div class="caption">実際のページを見る</div>
+                </div>
+                <p class="works-name">訓練校課題②</p>
+                <p class="works-info">Coding</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -154,7 +173,8 @@
     </footer>
     <!-- /footer -->
   </div>
-	<div class="back"></div>
+  <div class="back"></div>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
