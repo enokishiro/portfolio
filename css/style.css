@@ -102,7 +102,7 @@ li {
 }
 
 .header-logo a {
-  color: #fecfcf;
+  color: #58ddf7;
 }
 
 .header-nav-list {
@@ -118,7 +118,8 @@ li {
   font-size: 18px;
   padding: 5px 0;
   letter-spacing: .1em;
-  color: #fecfcf;
+  color: #58ddf7;
+  text-shadow: #777;
 }
 
 .header-nav-item a:hover {
@@ -181,8 +182,8 @@ li {
 
 .works-name {
   font-size: 14px;
-  font-weight: bold;
   margin-top: 8px;
+  color: #58ddf7;
 }
 
 .works-info {
@@ -252,19 +253,25 @@ li {
 .article-title {
   margin-bottom: 20px;
   text-align: center;
+  color: #58ddf7;
+  text-shadow: #777;
 }
 
 .article-img {
   margin-bottom: 20px;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .article-body {
   max-width: 720px;
   margin: 0 auto;
+  padding-top: 5%;
 }
 
 .article-info-title {
   font-size: 15px;
+  color: #58ddf7;
 }
 
 .article-body img {
