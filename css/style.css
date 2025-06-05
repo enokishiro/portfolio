@@ -105,6 +105,10 @@ li {
   color: #58ddf7;
 }
 
+.header-logo a:hover {
+  color: #fa9699;
+}
+
 .header-nav-list {
   display: flex;
   justify-content: space-between;
@@ -124,6 +128,7 @@ li {
 
 .header-nav-item a:hover {
   opacity: .8;
+  color: #fa9699;
 }
 
 /*--------------------------------
